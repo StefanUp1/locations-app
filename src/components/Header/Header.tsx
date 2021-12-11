@@ -1,11 +1,12 @@
 import React from "react";
+import "./header.scss";
 
 interface HeaderProps {
   title: string;
   pageName: string;
 }
 
-const Header = ({ title, pageName }: HeaderProps) => {
+const Header = ({ title, pageName }: HeaderProps): JSX.Element => {
   return (
     <div>
       <p>{pageName}</p>

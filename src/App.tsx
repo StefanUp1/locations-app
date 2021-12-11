@@ -6,14 +6,12 @@ const NotFound = React.lazy(() => import("pages/NotFound"));
 
 function App() {
   return (
-    <div className="app-container">
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<AllLocations />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path="/" element={<AllLocations />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
 }
 
