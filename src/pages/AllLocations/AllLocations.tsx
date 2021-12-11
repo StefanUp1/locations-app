@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "components/Header";
+import Page from "components/Page";
 
-const AllLocations = () => {
+const AllLocations = (): JSX.Element => {
   return (
-    <div>
-      <Header title="Acme" pageName="All locations" />
+    <Page header={<Header title="Acme" pageName="All locations" />}>
       <div>content</div>
-    </div>
+    </Page>
   );
 };
 
