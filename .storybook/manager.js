@@ -3,7 +3,7 @@ import { create, themes } from '@storybook/theming'
 
 addons.setConfig({
     theme: create({
-        base: themes.light,
+        base: 'dark',
         brandTitle: 'ACME',
     })
 })
