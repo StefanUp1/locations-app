@@ -1,0 +1,27 @@
+@import "../../styles/_colors.scss";
+
+.c-header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 2.8rem 4rem;
+  max-height: 12.8rem;
+  background-color: $white;
+  border: 1px solid $header-border-color;
+}
+
+.c-header__title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.273;
+  opacity: 0.8;
+}
+
+.c-header__page-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.75;
+  letter-spacing: 0.18px;
+  opacity: 0.3;
+}
