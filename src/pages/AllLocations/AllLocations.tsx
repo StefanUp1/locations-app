@@ -70,7 +70,10 @@ const AllLocations = (): JSX.Element => {
   console.log(data, "data");
 
   useEffect(() => {
-    // We could handle errors here
+    /** 
+     * We could handle errors here
+     * To simulate error just enter some random string instead of valid url inside "services/locations" "getLocations" method.
+     */
     if (isError) alert("Something went wrong. Please try again later.");
   }, [isError]);
 
