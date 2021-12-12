@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots components/AllLocations Default 1`] = `<AllLocations />`;
-
-exports[`Storyshots pages/AllLocations Default 1`] = `<AllLocations />`;
+exports[`Storyshots pages/AllLocations Default 1`] = `
+<React.Fragment>
+  <div
+    id="root"
+  >
+    <Unknown />
+  </div>
+  <div
+    id="modal-root"
+  />
+</React.Fragment>
+`;

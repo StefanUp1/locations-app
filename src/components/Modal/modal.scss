@@ -30,7 +30,7 @@
   background-color: $white;
   z-index: 99;
   border-radius: 0.2rem;
-  box-shadow: 0 8px 16px -4px $modal-box-shadow;
+  box-shadow: 0 8px 16px -4px $modal-box-shadow-color;
 }
 
 .modal__content-header {
@@ -38,13 +38,13 @@
   justify-content: space-between;
   // padding is set here because of margin collapsing with adjacent siblings
   padding-bottom: 1.6rem;
+  transition: all 0.2s;
 
   & button {
     opacity: 0.3;
 
     &:hover {
       opacity: 0.6;
-      transition: all 0.2s;
     }
   }
 }
@@ -67,7 +67,7 @@
 }
 
 .modal__content-footer-button {
-  background-color: $modal-footer-button;
+  background-color: $modal-footer-button-color;
   width: 6.4rem;
   height: 3.2rem;
   color: $white;
@@ -75,4 +75,9 @@
   font-weight: 600;
   line-height: 1.714;
   border-radius: 1.6rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $modal-footer-button-hover-color;
+  }
 }

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots components/Header Default 1`] = `
+exports[`Storyshots components/Modal Default 1`] = `
 <React.Fragment>
   <div
     id="root"

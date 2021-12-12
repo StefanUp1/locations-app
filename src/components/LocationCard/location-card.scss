@@ -1,13 +1,16 @@
 @import "../../styles/colors";
+@import "../../styles/mixins";
 
 .location-card {
   position: relative;
   min-width: 34rem;
+  max-width: 34rem;
   min-height: 14rem;
+  max-height: 14rem;
   padding: 1.5rem 2.5rem;
   background-color: $location-card-bg-color;
   border: 1px solid $location-card-border-color;
-  border-radius: 2%;
+  border-radius: 0.2rem;
   cursor: pointer;
 
   &:hover {
@@ -40,4 +43,5 @@
   font-weight: 700;
   line-height: 1.778;
   margin-bottom: 0.5rem;
+  @include lineClamp(1);
 }

@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import classNames from 'classnames';
 import Users from "assets/images/Users.svg";
 import Timezone from "assets/images/Timezone.svg";
 import Views from "assets/images/Views.svg";
@@ -13,16 +14,18 @@ interface LocationContentItemType {
   imageAlt: string;
 }
 
-interface LocationContentProps {
+export interface LocationContentProps {
   userCount: number;
   createdAt: string;
   viewCount: number;
+  className?: string;
 }
 
 const LocationContent = ({
   userCount,
   createdAt,
   viewCount,
+  className,
 }: LocationContentProps): JSX.Element => {
   const locationContentItems: LocationContentItemType[] = useMemo(
     () => [
@@ -51,7 +54,7 @@ const LocationContent = ({
   );
 
   return (
-    <ul className="location-content__list">
+    <ul className={classNames('location-content__list', className)}>
       {locationContentItems.map((item) => (
         <li key={item.id} className="location-content__list-item">
           <img

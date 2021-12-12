@@ -1,25 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots components/Location Card Default 1`] = `
-<LocationCard
-  onClick={[Function]}
-  title="Title"
->
-  <div>
-    Test content
+<React.Fragment>
+  <div
+    id="root"
+  >
+    <Unknown />
   </div>
-</LocationCard>
+  <div
+    id="modal-root"
+  />
+</React.Fragment>
 `;
 
 exports[`Storyshots components/Location Card Location Card With Location Content 1`] = `
-<LocationCard
-  onClick={[Function]}
-  title="Title"
->
-  <LocationContent
-    createdAt="2:32pm (GMT+01:00)"
-    userCount={123}
-    viewCount={3}
+<React.Fragment>
+  <div
+    id="root"
+  >
+    <Unknown />
+  </div>
+  <div
+    id="modal-root"
   />
-</LocationCard>
+</React.Fragment>
 `;

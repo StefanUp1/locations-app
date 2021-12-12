@@ -1,24 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots components/Page Default 1`] = `
-<Page>
-  <div>
-    Default page component
+<React.Fragment>
+  <div
+    id="root"
+  >
+    <Unknown />
   </div>
-</Page>
+  <div
+    id="modal-root"
+  />
+</React.Fragment>
 `;
 
 exports[`Storyshots components/Page With Header 1`] = `
-<Page
-  header={
-    <Header
-      pageName="Page Name"
-      title="Page title"
-    />
-  }
->
-  <div>
-    Default page component
+<React.Fragment>
+  <div
+    id="root"
+  >
+    <Unknown />
   </div>
-</Page>
+  <div
+    id="modal-root"
+  />
+</React.Fragment>
 `;

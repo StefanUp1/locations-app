@@ -2,9 +2,13 @@ import initStoryshots, {
   Stories2SnapsConverter,
 } from "@storybook/addon-storyshots";
 import path from "path";
+import ReactDOM from "react-dom";
+import { ReactPortal } from "react";
+
+ReactDOM.createPortal = (node) => node as ReactPortal;
 
 initStoryshots({
-  test: async ({ story, context, done }) => {
+  test: async ({ story, context }) => {
     const converter = new Stories2SnapsConverter({
       snapshotsDirName: "__snapshots__",
     });
