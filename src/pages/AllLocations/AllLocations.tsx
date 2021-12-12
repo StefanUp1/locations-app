@@ -6,94 +6,37 @@ import LocationContent from "components/LocationContent";
 import Loader from "components/Loader";
 import { Location } from "types/locations";
 import useGetLocations from "hooks/useGetLocations";
+import useLocationsData from "hooks/useLocationsData";
 
 import "./all-locations.scss";
 
 const LocationModal = React.lazy(() => import("components/LocationModal"));
 
-const locationsMockData: Location[] = [
-  {
-    id: "1",
-    createdAt: "2021-03-05T09:10:35.462Z",
-    name:
-      "Test Location 112312312312312312312312312312312312312312312312312312312312321123",
-    userCount: 12,
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quaerat nam sed deserunt tempore iure, eos voluptas officiis, accusamus labore ipsum molestias. Consectetur nulla aut provident suscipit! Fuga suscipit reiciendis temporibus eius vel quisquam veritatis quae iusto qui eligendi, possimus nisi nulla nostrum illo impedit soluta, provident ducimus dolor optio itaque harum, aut adipisci in. Rem dicta minus ab sint, similique nostrum saepe incidunt accusamus, mollitia nemo ipsum! Ad tempora dolores magnam molestiae, hic quam harum ea soluta, illum sed rerum minima quas iusto aliquam sequi accusamus consequatur quia sapiente assumenda adipisci! Suscipit eos eveniet doloremque magnam velit itaque autem!",
-  },
-  {
-    id: "2",
-    createdAt: "2021-03-05T09:10:35.462Z",
-    name: "Test Location 2",
-    userCount: 12,
-    description: " Lorem ipsum dolor sit amet.",
-  },
-  {
-    id: "3",
-    createdAt: "2021-03-05T09:10:35.462Z",
-    name: "Test Location 3",
-    userCount: 12,
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet sint dolores pariatur ullam unde aperiam.",
-  },
-  {
-    id: "4",
-    createdAt: "2021-03-05T09:10:35.462Z",
-    name: "Test Location 4",
-    userCount: 12,
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet sint dolores pariatur ullam unde aperiam.",
-  },
-  {
-    id: "5",
-    createdAt: "2021-03-05T09:10:35.462Z",
-    name: "Test Location 5",
-    userCount: 12,
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet sint dolores pariatur ullam unde aperiam.",
-  },
-  {
-    id: "6",
-    createdAt: "2021-03-05T09:10:35.462Z",
-    name: "Test Location 6",
-    userCount: 12,
-    description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet sint dolores pariatur ullam unde aperiam.",
-  },
-];
+interface AllLocationsPageContentProps {
+  locations: Location[];
+}
 
-const AllLocations = (): JSX.Element => {
+const AllLocationsPageContent = ({
+  locations,
+}: AllLocationsPageContentProps) => {
+  const {
+    locationsWithViewCount,
+    activeLocation,
+    updateLocationViewCount,
+    setActiveLocation,
+  } = useLocationsData(locations);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [activeLocation, setActiveLocation] = useState<Location>();
-  const { data, isLoading, isError } = useGetLocations();
-
-  console.log(data, "data");
-
-  useEffect(() => {
-    /** 
-     * We could handle errors here
-     * To simulate error just enter some random string instead of valid url inside "services/locations" "getLocations" method.
-     */
-    if (isError) alert("Something went wrong. Please try again later.");
-  }, [isError]);
 
   const handleOnCardClick = (id: string) => {
-    if (id === activeLocation?.id) return setIsModalOpen(true);
-
-    const selectedLocation = locationsMockData.find(
-      (location) => location.id === id
-    );
-
-    setActiveLocation(selectedLocation);
+    updateLocationViewCount(id);
+    setActiveLocation(id);
     setIsModalOpen(true);
   };
 
-  if (!data || isLoading) return <Loader />;
-
   return (
-    <Page header={<Header title="Acme locations" pageName="All locations" />}>
+    <>
       <div className="all-locations__content">
-        {locationsMockData.map((location) => (
+        {locationsWithViewCount.map((location) => (
           <LocationCard
             key={location.id}
             onClick={() => handleOnCardClick(location.id)}
@@ -101,7 +44,7 @@ const AllLocations = (): JSX.Element => {
           >
             <LocationContent
               userCount={location.userCount}
-              viewCount={0}
+              viewCount={location.viewCount}
               createdAt={location.createdAt}
             />
           </LocationCard>
@@ -113,12 +56,32 @@ const AllLocations = (): JSX.Element => {
             title={activeLocation.name}
             onClose={() => setIsModalOpen(false)}
             userCount={activeLocation.userCount}
-            viewCount={0}
+            viewCount={activeLocation.viewCount}
             createdAt={activeLocation.createdAt}
             description={activeLocation.description}
           />
         )}
       </Suspense>
+    </>
+  );
+};
+
+const AllLocations = (): JSX.Element => {
+  const { data: locations, isLoading, isError } = useGetLocations();
+
+  useEffect(() => {
+    /**
+     * We could handle errors here
+     * To simulate error just enter some random string instead of valid url inside "services/locations" "getLocations" method.
+     */
+    if (isError) alert("Something went wrong. Please try again later.");
+  }, [isError]);
+
+  if (!locations || isLoading) return <Loader />;
+
+  return (
+    <Page header={<Header title="Acme locations" pageName="All locations" />}>
+      <AllLocationsPageContent locations={locations} />
     </Page>
   );
 };
