@@ -1,4 +1,5 @@
 import "../src/index.scss";
+import AppDecorator from "./decorators/AppDecorator";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -9,3 +10,5 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [AppDecorator];

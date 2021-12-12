@@ -1,0 +1,78 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $modal-overlay-bg-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  width: 44rem;
+  height: 35rem;
+  padding: 1.6rem 2.5rem 1rem 2.5rem;
+  background-color: $white;
+  z-index: 99;
+  border-radius: 0.2rem;
+  box-shadow: 0 8px 16px -4px $modal-box-shadow;
+}
+
+.modal__content-header {
+  display: flex;
+  justify-content: space-between;
+  // padding is set here because of margin collapsing with adjacent siblings
+  padding-bottom: 1.6rem;
+
+  & button {
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.6;
+      transition: all 0.2s;
+    }
+  }
+}
+
+.modal__content-header-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  @include lineClamp(1);
+}
+
+.modal__content-body {
+  margin-top: 1.6rem;
+}
+
+.modal__content-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.modal__content-footer-button {
+  background-color: $modal-footer-button;
+  width: 6.4rem;
+  height: 3.2rem;
+  color: $white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.714;
+  border-radius: 1.6rem;
+}
