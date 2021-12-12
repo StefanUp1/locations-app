@@ -33,6 +33,18 @@
   box-shadow: 0 8px 16px -4px $modal-box-shadow-color;
 }
 
+@media only screen and (max-height: 360px) {
+  .modal-content {
+    height: 30rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .modal-content {
+    width: 38rem;
+  }
+}
+
 .modal__content-header {
   display: flex;
   justify-content: space-between;

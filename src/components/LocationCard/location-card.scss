@@ -3,10 +3,8 @@
 
 .location-card {
   position: relative;
-  min-width: 34rem;
-  max-width: 34rem;
-  min-height: 14rem;
-  max-height: 14rem;
+  width: 34rem;
+  height: 14rem;
   padding: 1.5rem 2.5rem;
   background-color: $location-card-bg-color;
   border: 1px solid $location-card-border-color;
