@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
-import classNames from 'classnames';
+import { useTranslation } from "react-i18next";
+import classNames from "classnames";
 import Users from "assets/images/Users.svg";
 import Timezone from "assets/images/Timezone.svg";
 import Views from "assets/images/Views.svg";
@@ -27,34 +28,36 @@ const LocationContent = ({
   viewCount,
   className,
 }: LocationContentProps): JSX.Element => {
+  const { t } = useTranslation();
+
   const locationContentItems: LocationContentItemType[] = useMemo(
     () => [
       {
         id: "userCount",
         value: userCount,
-        valueSuffix: "Users",
+        valueSuffix: t("users"),
         icon: Users,
-        imageAlt: "Users",
+        imageAlt: t("users"),
       },
       {
         id: "createdAt",
         value: createdAt,
         icon: Timezone,
-        imageAlt: "Timezone",
+        imageAlt: t("timezone"),
       },
       {
         id: "viewCount",
         value: viewCount,
-        valueSuffix: "Views",
+        valueSuffix: t("views"),
         icon: Views,
-        imageAlt: "Views",
+        imageAlt: t("views"),
       },
     ],
-    [createdAt, userCount, viewCount]
+    [createdAt, t, userCount, viewCount]
   );
 
   return (
-    <ul className={classNames('location-content__list', className)}>
+    <ul className={classNames("location-content__list", className)}>
       {locationContentItems.map((item) => (
         <li key={item.id} className="location-content__list-item">
           <img

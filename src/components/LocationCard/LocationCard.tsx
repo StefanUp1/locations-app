@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { useTranslation } from 'react-i18next';
 import Edit from "assets/images/Edit.svg";
 import onKeyPress from "helpers/onKeyPress";
 import { ENTER_KEY } from "constants/keys";
@@ -11,6 +12,8 @@ interface LocationCardProps {
 }
 
 const LocationCard = ({ title, onClick, children }: LocationCardProps) => {
+  const { t } = useTranslation();
+
   return (
     <article
       onClick={onClick}
@@ -20,7 +23,7 @@ const LocationCard = ({ title, onClick, children }: LocationCardProps) => {
     >
       <h2 className="location-card__title">{title}</h2>
       <div className="location-card__edit-icon">
-        <img src={Edit} width="16" height="16" alt="Edit" />
+        <img src={Edit} width="16" height="16" alt={t("edit")} />
       </div>
       <div className="location-card__content">{children}</div>
     </article>

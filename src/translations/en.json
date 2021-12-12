@@ -1,0 +1,14 @@
+{
+  "loading": "Loading",
+  "edit": "Edit",
+  "users": "Users",
+  "timezone": "Timezone",
+  "views": "Views",
+  "description": "Description",
+  "close": "Close",
+  "done": "Done",
+  "backToHomepage": "Back to Homepage",
+  "allLocations": "All locations",
+  "locations": "locations",
+  "somethingWentWrong": "Something went wrong. Please try again later."
+}

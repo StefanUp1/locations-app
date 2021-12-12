@@ -1,5 +1,6 @@
 import React, { ReactNode, useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
+import { useTranslation } from "react-i18next";
 import Close from "assets/images/Close.svg";
 
 import "./modal.scss";
@@ -16,6 +17,8 @@ export interface ModalProps {
 }
 
 const Modal = ({ children, onClose, title, onDone = onClose }: ModalProps) => {
+  const { t } = useTranslation();
+
   const handleEscape = useCallback(
     (e: KeyboardEvent) => {
       onKeyPress(e, onClose, ESCAPE_KEY);
@@ -35,7 +38,7 @@ const Modal = ({ children, onClose, title, onDone = onClose }: ModalProps) => {
         <div className="modal__content-header">
           <h3 className="modal__content-header-title">{title}</h3>
           <button tabIndex={0} onClick={onClose}>
-            <img src={Close} width="16" height="16" alt="Close" />
+            <img src={Close} width="16" height="16" alt={t("close")} />
           </button>
         </div>
         <div className="modal__content-body">{children}</div>
@@ -45,7 +48,7 @@ const Modal = ({ children, onClose, title, onDone = onClose }: ModalProps) => {
             onClick={onDone}
             tabIndex={0}
           >
-            Done
+            {t("done")}
           </button>
         </div>
       </div>

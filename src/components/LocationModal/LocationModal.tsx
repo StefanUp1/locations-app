@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Modal from "components/Modal";
 import { ModalProps } from "components/Modal/Modal";
 import LocationContent from "components/LocationContent";
@@ -21,6 +22,8 @@ const LocationModal = ({
   onDone,
   title,
 }: LocationModalProps) => {
+  const { t } = useTranslation();
+
   return (
     <Modal title={title} onClose={onClose} onDone={onDone}>
       <LocationContent
@@ -29,7 +32,9 @@ const LocationModal = ({
         viewCount={viewCount}
       />
       <div className="location-modal__description">
-        <h4 className="location-modal__description-title">Description</h4>
+        <h4 className="location-modal__description-title">
+          {t("description")}
+        </h4>
         <p className="location-modal__description-content">{description}</p>
       </div>
     </Modal>

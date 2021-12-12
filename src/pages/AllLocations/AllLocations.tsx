@@ -1,4 +1,5 @@
 import React, { useState, Suspense, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Header from "components/Header";
 import Page from "components/Page";
 import LocationCard from "components/LocationCard";
@@ -67,6 +68,7 @@ const AllLocationsPageContent = ({
 };
 
 const AllLocations = (): JSX.Element => {
+  const { t } = useTranslation();
   const { data: locations, isLoading, isError } = useGetLocations();
 
   useEffect(() => {
@@ -74,13 +76,17 @@ const AllLocations = (): JSX.Element => {
      * We could handle errors here
      * To simulate error just enter some random string instead of valid url inside "services/locations" "getLocations" method.
      */
-    if (isError) alert("Something went wrong. Please try again later.");
-  }, [isError]);
+    if (isError) alert(t("somethingWentWrong"));
+  }, [isError, t]);
 
   if (!locations || isLoading) return <Loader />;
 
   return (
-    <Page header={<Header title="Acme locations" pageName="All locations" />}>
+    <Page
+      header={
+        <Header title={"Acme " + t("locations")} pageName={t("allLocations")} />
+      }
+    >
       <AllLocationsPageContent locations={locations} />
     </Page>
   );
