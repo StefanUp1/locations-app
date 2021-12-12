@@ -1,20 +1,15 @@
-import React, { useState, Suspense } from "react";
+import React, { useState, Suspense, useEffect } from "react";
 import Header from "components/Header";
 import Page from "components/Page";
 import LocationCard from "components/LocationCard";
 import LocationContent from "components/LocationContent";
+import Loader from "components/Loader";
+import { Location } from "types/locations";
+import useGetLocations from "hooks/useGetLocations";
 
 import "./all-locations.scss";
 
 const LocationModal = React.lazy(() => import("components/LocationModal"));
-
-interface Location {
-  id: string;
-  createdAt: string;
-  name: string;
-  userCount: number;
-  description: string;
-}
 
 const locationsMockData: Location[] = [
   {
@@ -70,6 +65,14 @@ const locationsMockData: Location[] = [
 const AllLocations = (): JSX.Element => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeLocation, setActiveLocation] = useState<Location>();
+  const { data, isLoading, isError } = useGetLocations();
+
+  console.log(data, "data");
+
+  useEffect(() => {
+    // We could handle errors here
+    if (isError) alert("Something went wrong. Please try again later.");
+  }, [isError]);
 
   const handleOnCardClick = (id: string) => {
     if (id === activeLocation?.id) return setIsModalOpen(true);
@@ -81,6 +84,8 @@ const AllLocations = (): JSX.Element => {
     setActiveLocation(selectedLocation);
     setIsModalOpen(true);
   };
+
+  if (!data || isLoading) return <Loader />;
 
   return (
     <Page header={<Header title="Acme locations" pageName="All locations" />}>
@@ -99,7 +104,7 @@ const AllLocations = (): JSX.Element => {
           </LocationCard>
         ))}
       </div>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         {isModalOpen && activeLocation && (
           <LocationModal
             title={activeLocation.name}
