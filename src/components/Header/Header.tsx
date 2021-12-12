@@ -10,7 +10,7 @@ const Header = ({ title, pageName }: HeaderProps): JSX.Element => {
   return (
     <div className="c-header">
       <p className="c-header__page-name">{pageName}</p>
-      <h2 className="c-header__title">{title}</h2>
+      <h1 className="c-header__title">{title}</h1>
     </div>
   );
 };

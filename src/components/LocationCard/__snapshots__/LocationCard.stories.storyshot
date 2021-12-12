@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots components/Location Card Default 1`] = `
+<LocationCard
+  onClick={[Function]}
+  title="Title"
+>
+  <div>
+    Test content
+  </div>
+</LocationCard>
+`;
+
+exports[`Storyshots components/Location Card Location Card With Location Content 1`] = `
+<LocationCard
+  onClick={[Function]}
+  title="Title"
+>
+  <LocationContent
+    createdAt="2:32pm (GMT+01:00)"
+    userCount={123}
+    viewCount={3}
+  />
+</LocationCard>
+`;

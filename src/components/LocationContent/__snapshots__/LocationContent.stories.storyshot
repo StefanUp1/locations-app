@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots components/Location Content Default 1`] = `
+<LocationContent
+  createdAt="2:32pm (GMT+01:00)"
+  userCount={100}
+  viewCount={0}
+/>
+`;

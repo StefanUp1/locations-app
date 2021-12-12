@@ -1,0 +1,43 @@
+@import "../../styles/colors";
+
+.location-card {
+  position: relative;
+  min-width: 34rem;
+  min-height: 14rem;
+  padding: 1.5rem 2.5rem;
+  background-color: $location-card-bg-color;
+  border: 1px solid $location-card-border-color;
+  border-radius: 2%;
+  cursor: pointer;
+
+  &:hover {
+    background: $location-card-hover-bg-color;
+    transition: all 0.2s;
+
+    .location-card__edit-icon {
+      opacity: 1;
+    }
+  }
+}
+
+.location-card__edit-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  background-color: $white;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+}
+
+.location-card__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.778;
+  margin-bottom: 0.5rem;
+}

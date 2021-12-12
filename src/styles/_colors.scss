@@ -1,8 +1,13 @@
 // colors
-$white: #FFFFFF;
+$white: #ffffff;
 
 // typography
-$default-font-color: #001122;
+$default-font-color: rgba(0, 17, 34, 0.8);
 
 // borders
-$header-border-color: #EEEEEE;
+$header-border-color: #eeeeee;
+$location-card-border-color: rgba(0, 17, 34, 0.1);
+
+//backgrounds
+$location-card-bg-color: rgba(246, 246, 246, 0.2);
+$location-card-hover-bg-color: rgba(246, 246, 246);

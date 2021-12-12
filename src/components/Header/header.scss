@@ -1,9 +1,9 @@
-@import "../../styles/_colors.scss";
+@import "../../styles/colors";
 
 .c-header {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: "flex-start";
   justify-content: center;
   padding: 2.8rem 4rem;
   max-height: 12.8rem;
@@ -15,7 +15,6 @@
   font-size: 2.2rem;
   font-weight: 600;
   line-height: 1.273;
-  opacity: 0.8;
 }
 
 .c-header__page-name {
