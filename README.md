@@ -21,6 +21,9 @@ Machine MacBook Pro
 - All location cards (on "All locations" page) are focusable with "Tab" button, and can be opened on "Enter" key press
 - Modal can be closed on "Esc" key press
 
+# Install dependencies
+To install dependencies inside project folder just run "yarn" command.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
