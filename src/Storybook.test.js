@@ -1,7 +1,7 @@
 import initStoryshots, { Stories2SnapsConverter } from '@storybook/addon-storyshots';
 import path from 'path';
 import ReactDOM from 'react-dom';
-import { create, act, ReactTestRenderer } from 'react-test-renderer';
+import { create, act } from 'react-test-renderer';
 
 export const wait = () => new Promise((resolve) => setTimeout(resolve));
 
@@ -9,8 +9,9 @@ ReactDOM.createPortal = (node) => node;
 
 /**
  * This peace of code is something that i have come upon on other projects using snapshot testing.
- * Basically in enable us to have fully rendered storyshots rendered and compared with previous versions (show diffs),
- * in each component folders separately (inside "__snapshots__" folder)
+ * Basically it enable us to have snapshots rendered and compared with previous versions (show diffs in terminal),
+ * in each component folders separately (inside "__snapshots__" folder).
+ * Default behaviour is that all snapshots are in the same file
  */
 initStoryshots({
   asyncJest: true,
