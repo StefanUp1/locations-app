@@ -10,9 +10,14 @@ export const Default = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-      <button onClick={() => setIsModalOpen(true)}>Toggle Modal</button>
+      <button
+        onClick={() => setIsModalOpen(true)}
+        style={{ border: "1px solid black", padding: 5 }}
+      >
+        Toggle Modal
+      </button>
       {isModalOpen && (
-        <Modal onClose={() => setIsModalOpen(true)} title="Test">
+        <Modal onClose={() => setIsModalOpen(false)} title="Test">
           <div>Test content</div>
         </Modal>
       )}

@@ -18,7 +18,7 @@ export const LocationCardWithLocationContent = () => (
   <LocationCard title="Title" onClick={action("onClick")}>
     <LocationContent
       userCount={123}
-      createdAt="2:32pm (GMT+01:00)"
+      createdAt="2021-03-05T09:10:35.462Z"
       viewCount={3}
     />
   </LocationCard>

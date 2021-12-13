@@ -9,7 +9,7 @@ export default {
 export const Default = () => (
   <LocationContent
     userCount={100}
-    createdAt="2:32pm (GMT+01:00)"
+    createdAt="2021-03-05T09:10:35.462Z"
     viewCount={0}
   />
 );
