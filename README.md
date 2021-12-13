@@ -11,6 +11,8 @@ App is tested in:
 - Safari  v14.1.1
 - Firefox v91.0 
 
+Machine MacBook Pro
+
 # Known issues
 - storybook-addon-i18n should be added https://storybook.js.org/addons/storybook-addon-i18n
 - Storybook console error only on Chrome browser ("All Locations" page)
