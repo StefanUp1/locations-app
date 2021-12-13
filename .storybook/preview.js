@@ -1,5 +1,9 @@
 import "../src/index.scss";
 import AppDecorator from "./decorators/AppDecorator";
+import { initialize, mswDecorator } from "msw-storybook-addon";
+import handlers from "../src/mocks/handlers";
+
+export const decorators = [AppDecorator, mswDecorator];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -9,6 +13,8 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  msw: { handlers: [handlers] },
 };
 
-export const decorators = [AppDecorator];
+// Initialize MSW
+initialize();
