@@ -3,7 +3,7 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
-import { server } from "./mocks/server.js";
+import { server } from "./mocks/server";
 
 // Establish API mocking before all tests.
 beforeAll(() => server.listen());
@@ -12,3 +12,10 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 // Clean up after the tests are finished.
 afterAll(() => server.close());
+
+let portalRoot = document.getElementById("portal");
+if (!portalRoot) {
+  portalRoot = document.createElement("div");
+  portalRoot.setAttribute("id", "modal-root");
+  document.body.appendChild(portalRoot);
+}

@@ -26,6 +26,10 @@ type Actions =
     };
 
 const init = (locations: Location[]): State => {
+  /**
+   * We could also save data in locale storage,
+   * and have click count preserved on refresh.
+   */
   const locationsWithViewCount = locations.map((location) => ({
     ...location,
     viewCount: 0,
