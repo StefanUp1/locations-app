@@ -13,6 +13,7 @@ Array [
           "padding": 5,
         }
       }
+      type="button"
     >
       Open Modal
     </button>

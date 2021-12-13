@@ -36,6 +36,7 @@ Array [
             className="location-card"
             onClick={[Function]}
             onKeyPress={[Function]}
+            role="button"
             tabIndex={0}
           >
             <h2
@@ -119,6 +120,7 @@ Array [
             className="location-card"
             onClick={[Function]}
             onKeyPress={[Function]}
+            role="button"
             tabIndex={0}
           >
             <h2
@@ -202,6 +204,7 @@ Array [
             className="location-card"
             onClick={[Function]}
             onKeyPress={[Function]}
+            role="button"
             tabIndex={0}
           >
             <h2
@@ -285,6 +288,7 @@ Array [
             className="location-card"
             onClick={[Function]}
             onKeyPress={[Function]}
+            role="button"
             tabIndex={0}
           >
             <h2
@@ -368,6 +372,7 @@ Array [
             className="location-card"
             onClick={[Function]}
             onKeyPress={[Function]}
+            role="button"
             tabIndex={0}
           >
             <h2
@@ -451,6 +456,7 @@ Array [
             className="location-card"
             onClick={[Function]}
             onKeyPress={[Function]}
+            role="button"
             tabIndex={0}
           >
             <h2

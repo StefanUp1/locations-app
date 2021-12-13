@@ -3357,7 +3357,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@^4.5.0":
+"@typescript-eslint/eslint-plugin@^4.15.1", "@typescript-eslint/eslint-plugin@^4.5.0":
   version "4.33.0"
   resolved "https://artifacts.apple.com/api/npm/npm-private/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.33.0.tgz#c24dc7c8069c7706bc40d99f6fa87edcb2005276"
   integrity sha1-wk3HyAacdwa8QNmfb6h+3LIAUnY=
@@ -3394,7 +3394,7 @@
     eslint-scope "^5.0.0"
     eslint-utils "^2.0.0"
 
-"@typescript-eslint/parser@^4.5.0":
+"@typescript-eslint/parser@^4.15.1", "@typescript-eslint/parser@^4.5.0":
   version "4.33.0"
   resolved "https://artifacts.apple.com/api/npm/npm-private/@typescript-eslint/parser/-/parser-4.33.0.tgz#dfe797570d9694e560528d18eecad86c8c744899"
   integrity sha1-3+eXVw2WlOVgUo0Y7srYbIx0SJk=
@@ -6471,6 +6471,24 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
+eslint-config-airbnb-base@^14.2.1:
+  version "14.2.1"
+  resolved "https://artifacts.apple.com/api/npm/npm-private/eslint-config-airbnb-base/-/eslint-config-airbnb-base-14.2.1.tgz#8a2eb38455dc5a312550193b319cdaeef042cd1e"
+  integrity sha1-ii6zhFXcWjElUBk7MZza7vBCzR4=
+  dependencies:
+    confusing-browser-globals "^1.0.10"
+    object.assign "^4.1.2"
+    object.entries "^1.1.2"
+
+eslint-config-airbnb@^18.2.1:
+  version "18.2.1"
+  resolved "https://artifacts.apple.com/api/npm/npm-private/eslint-config-airbnb/-/eslint-config-airbnb-18.2.1.tgz#b7fe2b42f9f8173e825b73c8014b592e449c98d9"
+  integrity sha1-t/4rQvn4Fz6CW3PIAUtZLkScmNk=
+  dependencies:
+    eslint-config-airbnb-base "^14.2.1"
+    object.assign "^4.1.2"
+    object.entries "^1.1.2"
+
 eslint-config-react-app@^6.0.0:
   version "6.0.0"
   resolved "https://artifacts.apple.com/api/npm/npm-private/eslint-config-react-app/-/eslint-config-react-app-6.0.0.tgz#ccff9fc8e36b322902844cbd79197982be355a0e"
@@ -6485,6 +6503,17 @@ eslint-import-resolver-node@^0.3.6:
   dependencies:
     debug "^3.2.7"
     resolve "^1.20.0"
+
+eslint-import-resolver-typescript@^2.4.0:
+  version "2.5.0"
+  resolved "https://artifacts.apple.com/api/npm/npm-private/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-2.5.0.tgz#07661966b272d14ba97f597b51e1a588f9722f0a"
+  integrity sha1-B2YZZrJy0Uupf1l7UeGliPlyLwo=
+  dependencies:
+    debug "^4.3.1"
+    glob "^7.1.7"
+    is-glob "^4.0.1"
+    resolve "^1.20.0"
+    tsconfig-paths "^3.9.0"
 
 eslint-module-utils@^2.7.1:
   version "2.7.1"
@@ -6529,7 +6558,7 @@ eslint-plugin-jest@^24.1.0:
   dependencies:
     "@typescript-eslint/experimental-utils" "^4.0.1"
 
-eslint-plugin-jsx-a11y@^6.3.1:
+eslint-plugin-jsx-a11y@^6.3.1, eslint-plugin-jsx-a11y@^6.4.1:
   version "6.5.1"
   resolved "https://artifacts.apple.com/api/npm/npm-private/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.5.1.tgz#cdbf2df901040ca140b6ec14715c988889c2a6d8"
   integrity sha1-zb8t+QEEDKFAtuwUcVyYiInCptg=
@@ -6552,7 +6581,7 @@ eslint-plugin-react-hooks@^4.2.0:
   resolved "https://artifacts.apple.com/api/npm/npm-private/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.3.0.tgz#318dbf312e06fab1c835a4abef00121751ac1172"
   integrity sha1-MY2/MS4G+rHINaSr7wASF1GsEXI=
 
-eslint-plugin-react@^7.21.5:
+eslint-plugin-react@^7.21.5, eslint-plugin-react@^7.22.0:
   version "7.27.1"
   resolved "https://artifacts.apple.com/api/npm/npm-private/eslint-plugin-react/-/eslint-plugin-react-7.27.1.tgz#469202442506616f77a854d91babaae1ec174b45"
   integrity sha1-RpICRCUGYW93qFTZG6uq4ewXS0U=
@@ -6631,7 +6660,7 @@ eslint-webpack-plugin@^2.5.2:
     normalize-path "^3.0.0"
     schema-utils "^3.1.1"
 
-eslint@^7.11.0:
+eslint@^7.11.0, eslint@^7.20.0:
   version "7.32.0"
   resolved "https://artifacts.apple.com/api/npm/npm-private/eslint/-/eslint-7.32.0.tgz#c6d328a14be3fb08c8d1d21e12c02fdb7a2a812d"
   integrity sha1-xtMooUvj+wjI0dIeEsAv23oqgS0=
@@ -7458,7 +7487,7 @@ glob-to-regexp@^0.4.1:
   resolved "https://artifacts.apple.com/api/npm/npm-private/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz#c75297087c851b9a578bd217dd59a92f59fe546e"
   integrity sha1-x1KXCHyFG5pXi9IX3VmpL1n+VG4=
 
-glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6:
+glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6, glob@^7.1.7:
   version "7.2.0"
   resolved "https://artifacts.apple.com/api/npm/npm-private/glob/-/glob-7.2.0.tgz#d15535af7732e02e948f4c41628bd910293f6023"
   integrity sha1-0VU1r3cy4C6Uj0xBYovZECk/YCM=
@@ -10412,7 +10441,7 @@ object.assign@^4.1.0, object.assign@^4.1.2:
     has-symbols "^1.0.1"
     object-keys "^1.1.1"
 
-object.entries@^1.1.0, object.entries@^1.1.5:
+object.entries@^1.1.0, object.entries@^1.1.2, object.entries@^1.1.5:
   version "1.1.5"
   resolved "https://artifacts.apple.com/api/npm/npm-private/object.entries/-/object.entries-1.1.5.tgz#e1acdd17c4de2cd96d5a08487cfb9db84d881861"
   integrity sha1-4azdF8TeLNltWghIfPuduE2IGGE=
@@ -14053,7 +14082,7 @@ ts-pnp@1.2.0, ts-pnp@^1.1.6:
   resolved "https://artifacts.apple.com/api/npm/npm-private/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha1-pQCtCEsHmPHDBxrzkeZZEshrypI=
 
-tsconfig-paths@^3.11.0:
+tsconfig-paths@^3.11.0, tsconfig-paths@^3.9.0:
   version "3.12.0"
   resolved "https://artifacts.apple.com/api/npm/npm-private/tsconfig-paths/-/tsconfig-paths-3.12.0.tgz#19769aca6ee8f6a1a341e38c8fa45dd9fb18899b"
   integrity sha1-GXaaym7o9qGjQeOMj6Rd2fsYiZs=

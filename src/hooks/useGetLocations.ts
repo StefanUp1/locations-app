@@ -1,9 +1,7 @@
-import useFetchData from "./useFetchData";
-import { getLocations } from "services/locations";
-import { Location } from "types/locations";
+import { getLocations } from 'services/locations';
+import { Location } from 'types/locations';
+import useFetchData from './useFetchData';
 
-const useGetLocations = () => {
-  return useFetchData<Location[]>(getLocations);
-};
+const useGetLocations = () => useFetchData<Location[]>(getLocations);
 
 export default useGetLocations;

@@ -1,14 +1,14 @@
-import React from "react";
-import { render, fireEvent, screen } from "@testing-library/react";
-import AllLocation from "./AllLocations";
+import React from 'react';
+import { render, fireEvent, screen } from '@testing-library/react';
+import AllLocation from './AllLocations';
 
-test("loads and displays cards", async () => {
+test('loads and displays cards', async () => {
   render(<AllLocation />);
 
   expect(await screen.findAllByText(/users/i)).toHaveLength(6);
 });
 
-test("clicking location card opens modal with selected location data", async () => {
+test('clicking location card opens modal with selected location data', async () => {
   render(<AllLocation />);
 
   fireEvent.click(await screen.findByText(/test location 2/i));
@@ -17,7 +17,7 @@ test("clicking location card opens modal with selected location data", async () 
   expect(await screen.findAllByText(/test location 2/i)).toHaveLength(2);
 });
 
-test("button click closes modal", async () => {
+test('button click closes modal', async () => {
   render(<AllLocation />);
 
   fireEvent.click(await screen.findByText(/test location 2/i));
@@ -32,7 +32,7 @@ const clickOnCardCloseModal = async () => {
   fireEvent.click(await screen.findByText(/done/i));
 };
 
-test("clicking location card increase view count", async () => {
+test('clicking location card increase view count', async () => {
   render(<AllLocation />);
 
   await clickOnCardCloseModal();

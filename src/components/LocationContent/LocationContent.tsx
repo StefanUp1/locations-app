@@ -1,12 +1,12 @@
-import React, { useMemo } from "react";
-import { useTranslation } from "react-i18next";
-import classNames from "classnames";
-import Users from "assets/images/Users.svg";
-import Timezone from "assets/images/Timezone.svg";
-import Views from "assets/images/Views.svg";
+import React, { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+import classNames from 'classnames';
+import Users from 'assets/images/Users.svg';
+import Timezone from 'assets/images/Timezone.svg';
+import Views from 'assets/images/Views.svg';
 
-import "./location-content.scss";
-import formatDateToTime from "helpers/formatDateToTime";
+import './location-content.scss';
+import formatDateToTime from 'helpers/formatDateToTime';
 
 interface LocationContentItemType {
   id: string;
@@ -34,31 +34,31 @@ const LocationContent = ({
   const locationContentItems: LocationContentItemType[] = useMemo(
     () => [
       {
-        id: "userCount",
+        id: 'userCount',
         value: userCount,
-        valueSuffix: t("users"),
+        valueSuffix: t('users'),
         icon: Users,
-        imageAlt: t("users"),
+        imageAlt: t('users'),
       },
       {
-        id: "createdAt",
+        id: 'createdAt',
         value: createdAt,
         icon: Timezone,
-        imageAlt: t("timezone"),
+        imageAlt: t('timezone'),
       },
       {
-        id: "viewCount",
+        id: 'viewCount',
         value: viewCount,
-        valueSuffix: t("views"),
+        valueSuffix: t('views'),
         icon: Views,
-        imageAlt: t("views"),
+        imageAlt: t('views'),
       },
     ],
-    [createdAt, t, userCount, viewCount]
+    [createdAt, t, userCount, viewCount],
   );
 
   return (
-    <ul className={classNames("location-content__list", className)}>
+    <ul className={classNames('location-content__list', className)}>
       {locationContentItems.map((item) => (
         <li key={item.id} className="location-content__list-item">
           <img
@@ -69,9 +69,10 @@ const LocationContent = ({
             alt={item.imageAlt}
           />
           <p className="location-content__list-item-text">
-            {item.id === "createdAt"
+            {item.id === 'createdAt'
               ? formatDateToTime(item.value as string)
-              : item.value}{" "}
+              : item.value}
+            {' '}
             {item.valueSuffix}
           </p>
         </li>

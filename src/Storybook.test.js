@@ -1,14 +1,11 @@
-import initStoryshots, {
-  Stories2SnapsConverter,
-} from "@storybook/addon-storyshots";
-import path from "path";
-import ReactDOM from "react-dom";
-import { create, act, ReactTestRenderer } from "react-test-renderer";
-import { ReactPortal } from "react";
+import initStoryshots, { Stories2SnapsConverter } from '@storybook/addon-storyshots';
+import path from 'path';
+import ReactDOM from 'react-dom';
+import { create, act, ReactTestRenderer } from 'react-test-renderer';
 
 export const wait = () => new Promise((resolve) => setTimeout(resolve));
 
-ReactDOM.createPortal = (node) => node as ReactPortal;
+ReactDOM.createPortal = (node) => node;
 
 /**
  * This peace of code is something that i have come upon on other projects using snapshot testing.
@@ -18,13 +15,11 @@ ReactDOM.createPortal = (node) => node as ReactPortal;
 initStoryshots({
   asyncJest: true,
   test: async ({ story, context, done }) => {
-    const converter = new Stories2SnapsConverter({
-      snapshotsDirName: "__snapshots__",
-    });
+    const converter = new Stories2SnapsConverter({ snapshotsDirName: '__snapshots__' });
     const snapshotFilename = converter.getSnapshotFileName(context);
     const view = story.render();
 
-    let tree: ReactTestRenderer = {} as ReactTestRenderer;
+    let tree = {};
     act(() => {
       tree = create(view);
     });
@@ -46,6 +41,6 @@ initStoryshots({
     }
 
     tree.unmount();
-    done!();
+    done();
   },
 });

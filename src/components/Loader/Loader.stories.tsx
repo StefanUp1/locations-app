@@ -1,8 +1,8 @@
-import React from "react";
-import Loader from "./Loader";
+import React from 'react';
+import Loader from './Loader';
 
 export default {
-  title: "components/Loader",
+  title: 'components/Loader',
   component: Loader,
 };
 

@@ -1,8 +1,8 @@
-import React from "react";
-import LocationContent from "./LocationContent";
+import React from 'react';
+import LocationContent from './LocationContent';
 
 export default {
-  title: "components/Location Content",
+  title: 'components/Location Content',
   component: LocationContent,
 };
 

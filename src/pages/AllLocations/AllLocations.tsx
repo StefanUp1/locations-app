@@ -1,25 +1,23 @@
-import React, { useState, Suspense, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import Header from "components/Header";
-import Page from "components/Page";
-import LocationCard from "components/LocationCard";
-import LocationContent from "components/LocationContent";
-import Loader from "components/Loader";
-import { Location } from "types/locations";
-import useGetLocations from "hooks/useGetLocations";
-import useLocationsData from "hooks/useLocationsData";
+import React, { useState, Suspense, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import Header from 'components/Header';
+import Page from 'components/Page';
+import LocationCard from 'components/LocationCard';
+import LocationContent from 'components/LocationContent';
+import Loader from 'components/Loader';
+import { Location } from 'types/locations';
+import useGetLocations from 'hooks/useGetLocations';
+import useLocationsData from 'hooks/useLocationsData';
 
-import "./all-locations.scss";
+import './all-locations.scss';
 
-const LocationModal = React.lazy(() => import("components/LocationModal"));
+const LocationModal = React.lazy(() => import('components/LocationModal'));
 
 interface AllLocationsPageContentProps {
   locations: Location[];
 }
 
-const AllLocationsPageContent = ({
-  locations,
-}: AllLocationsPageContentProps) => {
+const AllLocationsPageContent = ({ locations }: AllLocationsPageContentProps) => {
   const {
     locationsWithViewCount,
     activeLocation,
@@ -74,9 +72,11 @@ const AllLocations = (): JSX.Element => {
   useEffect(() => {
     /**
      * We could handle errors here
-     * To simulate error just enter some random string instead of valid url inside "services/locations" "getLocations" method.
+     * To simulate error just enter some random string
+     * instead of valid url inside "services/locations" "getLocations" method.
      */
-    if (isError) alert(t("somethingWentWrong"));
+    // eslint-disable-next-line no-alert
+    if (isError) alert(t('somethingWentWrong'));
   }, [isError, t]);
 
   if (!locations || isLoading) return <Loader />;
@@ -84,7 +84,7 @@ const AllLocations = (): JSX.Element => {
   return (
     <Page
       header={
-        <Header title={"Acme " + t("locations")} pageName={t("allLocations")} />
+        <Header title={`Acme ${t('locations')}`} pageName={t('allLocations')} />
       }
     >
       <AllLocationsPageContent locations={locations} />

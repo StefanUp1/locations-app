@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from 'react';
 
 const useFetchData = <T>(fetchMethod: () => Promise<T>) => {
   const [data, setData] = useState<T>();

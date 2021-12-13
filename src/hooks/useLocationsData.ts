@@ -1,5 +1,5 @@
-import { useCallback, useReducer } from "react";
-import { Location } from "types/locations";
+import { useCallback, useReducer } from 'react';
+import { Location } from 'types/locations';
 
 interface LocationWithViewCount extends Location {
   viewCount: number;
@@ -11,8 +11,8 @@ interface State {
 }
 
 enum ACTIONS {
-  SET_ACTIVE_LOCATION = "SET_ACTIVE_LOCATION",
-  UPDATE_LOCATION_VIEW_COUNT = "UPDATE_LOCATION_VIEW_COUNT",
+  SET_ACTIVE_LOCATION = 'SET_ACTIVE_LOCATION',
+  UPDATE_LOCATION_VIEW_COUNT = 'UPDATE_LOCATION_VIEW_COUNT',
 }
 
 type Actions =
@@ -47,8 +47,7 @@ const reducer = (state: State, action: Actions): State => {
       let locationsWithUpdatedCount = [...state.locationsWithViewCount];
 
       locationsWithUpdatedCount = locationsWithUpdatedCount.map((location) => {
-        if (location.id === action.payload.id)
-          return { ...location, viewCount: location.viewCount + 1 };
+        if (location.id === action.payload.id) return { ...location, viewCount: location.viewCount + 1 };
         return location;
       });
 
@@ -59,7 +58,7 @@ const reducer = (state: State, action: Actions): State => {
     }
     case ACTIONS.SET_ACTIVE_LOCATION: {
       const selectedLocation = state.locationsWithViewCount.find(
-        (location) => location.id === action.payload.id
+        (location) => location.id === action.payload.id,
       );
 
       if (!selectedLocation) return state;

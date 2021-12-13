@@ -1,9 +1,9 @@
-import React from "react";
-import Page from "./Page";
-import Header from "components/Header";
+import React from 'react';
+import Header from 'components/Header';
+import Page from './Page';
 
 export default {
-  title: "components/Page",
+  title: 'components/Page',
   component: Page,
 };
 

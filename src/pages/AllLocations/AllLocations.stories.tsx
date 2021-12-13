@@ -1,8 +1,8 @@
-import React from "react";
-import AllLocations from "./AllLocations";
+import React from 'react';
+import AllLocations from './AllLocations';
 
 export default {
-  title: "pages/AllLocations",
+  title: 'pages/AllLocations',
   component: AllLocations,
 };
 

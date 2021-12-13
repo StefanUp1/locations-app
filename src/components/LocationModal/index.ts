@@ -1,1 +1,1 @@
-export { default } from "./LocationModal";
+export { default } from './LocationModal';

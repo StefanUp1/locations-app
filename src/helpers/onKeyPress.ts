@@ -1,7 +1,7 @@
 const onKeyPress = (
   e: React.KeyboardEvent<HTMLElement> | KeyboardEvent,
   callback: () => void,
-  key: string
+  key: string,
 ) => {
   if (e.key === key) callback();
 };
