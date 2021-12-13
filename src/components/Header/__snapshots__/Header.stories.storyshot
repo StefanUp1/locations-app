@@ -1,14 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots components/Header Default 1`] = `
-<React.Fragment>
+Array [
   <div
     id="root"
   >
-    <Unknown />
-  </div>
+    <div
+      className="c-header"
+    >
+      <p
+        className="c-header__page-name"
+      >
+        All locations
+      </p>
+      <h1
+        className="c-header__title"
+      >
+        Acme
+      </h1>
+    </div>
+  </div>,
   <div
     id="modal-root"
-  />
-</React.Fragment>
+  />,
+]
 `;

@@ -14,7 +14,7 @@ export const Default = () => {
         onClick={() => setIsModalOpen(true)}
         style={{ border: "1px solid black", padding: 5 }}
       >
-        Toggle Modal
+        Open Modal
       </button>
       {isModalOpen && (
         <Modal onClose={() => setIsModalOpen(false)} title="Test">

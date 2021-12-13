@@ -11673,9 +11673,9 @@ postcss@^7, postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, po
     source-map "^0.6.1"
 
 postcss@^8.1.0:
-  version "8.4.4"
-  resolved "https://artifacts.apple.com/api/npm/npm-private/postcss/-/postcss-8.4.4.tgz#d53d4ec6a75fd62557a66bb41978bf47ff0c2869"
-  integrity sha1-1T1Oxqdf1iVXpmu0GXi/R/8MKGk=
+  version "8.4.5"
+  resolved "https://artifacts.apple.com/api/npm/npm-private/postcss/-/postcss-8.4.5.tgz#bae665764dfd4c6fcc24dc0fdf7e7aa00cc77f95"
+  integrity sha1-uuZldk39TG/MJNwP3356oAzHf5U=
   dependencies:
     nanoid "^3.1.30"
     picocolors "^1.0.0"
@@ -12073,9 +12073,9 @@ react-docgen-typescript@^1.22.0:
   integrity sha1-ACMsjo5H9EN8rBM7h5s+lDcoS+4=
 
 react-docgen-typescript@^2.0.0:
-  version "2.2.1"
-  resolved "https://artifacts.apple.com/api/npm/npm-private/react-docgen-typescript/-/react-docgen-typescript-2.2.1.tgz#608ef48bd54661c2e59cc094ce5726c9e9636e30"
-  integrity sha1-YI70i9VGYcLlnMCUzlcmyeljbjA=
+  version "2.2.2"
+  resolved "https://artifacts.apple.com/api/npm/npm-private/react-docgen-typescript/-/react-docgen-typescript-2.2.2.tgz#4611055e569edc071204aadb20e1c93e1ab1659c"
+  integrity sha1-RhEFXlae3AcSBKrbIOHJPhqxZZw=
 
 react-docgen@^5.0.0:
   version "5.4.0"
@@ -12203,17 +12203,17 @@ react-refresh@^0.8.3:
   integrity sha1-ch1GV2ctQAxePHXQY8SoX7LV1o8=
 
 react-router-dom@6, react-router-dom@^6.0.0:
-  version "6.1.0"
-  resolved "https://artifacts.apple.com/api/npm/npm-private/react-router-dom/-/react-router-dom-6.1.0.tgz#94e650ee43b0cdeb80049dea72223402a27c7f61"
-  integrity sha1-lOZQ7kOwzeuABJ3qciI0AqJ8f2E=
+  version "6.1.1"
+  resolved "https://artifacts.apple.com/api/npm/npm-private/react-router-dom/-/react-router-dom-6.1.1.tgz#ed59376ff9115bc49227e87982a32e91e9530ca3"
+  integrity sha1-7Vk3b/kRW8SSJ+h5gqMukelTDKM=
   dependencies:
     history "^5.1.0"
-    react-router "6.1.0"
+    react-router "6.1.1"
 
-react-router@6.1.0, react-router@^6.0.0:
-  version "6.1.0"
-  resolved "https://artifacts.apple.com/api/npm/npm-private/react-router/-/react-router-6.1.0.tgz#a34a2dbba7f6167d64a4c209009f28b635ea8477"
-  integrity sha1-o0otu6f2Fn1kpMIJAJ8otjXqhHc=
+react-router@6.1.1, react-router@^6.0.0:
+  version "6.1.1"
+  resolved "https://artifacts.apple.com/api/npm/npm-private/react-router/-/react-router-6.1.1.tgz#16f41bf54e87d995bcd4d447720a693f77d8fcb9"
+  integrity sha1-FvQb9U6H2ZW81NRHcgppP3fY/Lk=
   dependencies:
     history "^5.1.0"
 
@@ -12312,7 +12312,7 @@ react-syntax-highlighter@^13.5.3:
     prismjs "^1.21.0"
     refractor "^3.1.0"
 
-"react-test-renderer@^16.8.0 || ^17.0.0":
+"react-test-renderer@^16.8.0 || ^17.0.0", react-test-renderer@^17.0.2:
   version "17.0.2"
   resolved "https://artifacts.apple.com/api/npm/npm-private/react-test-renderer/-/react-test-renderer-17.0.2.tgz#4cd4ae5ef1ad5670fc0ef776e8cc7e1231d9866c"
   integrity sha1-TNSuXvGtVnD8Dvd26Mx+EjHZhmw=
@@ -14175,9 +14175,9 @@ typescript@^4.1.2:
   integrity sha1-r6qFjmjHEDMX2J65DF2JBiaNNTw=
 
 uglify-js@^3.1.4:
-  version "3.14.4"
-  resolved "https://artifacts.apple.com/api/npm/npm-private/uglify-js/-/uglify-js-3.14.4.tgz#68756f17d1b90b9d289341736cb9a567d6882f90"
-  integrity sha1-aHVvF9G5C50ok0FzbLmlZ9aIL5A=
+  version "3.14.5"
+  resolved "https://artifacts.apple.com/api/npm/npm-private/uglify-js/-/uglify-js-3.14.5.tgz#cdabb7d4954231d80cb4a927654c4655e51f4859"
+  integrity sha1-zau31JVCMdgMtKknZUxGVeUfSFk=
 
 unbox-primitive@^1.0.1:
   version "1.0.1"

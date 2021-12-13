@@ -1,14 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots components/Location Content Default 1`] = `
-<React.Fragment>
+Array [
   <div
     id="root"
   >
-    <Unknown />
-  </div>
+    <ul
+      className="location-content__list"
+    >
+      <li
+        className="location-content__list-item"
+      >
+        <img
+          alt="users"
+          className="location-content__list-item-image"
+          height="14"
+          src="Users.svg"
+          width="14"
+        />
+        <p
+          className="location-content__list-item-text"
+        >
+          100
+           
+          users
+        </p>
+      </li>
+      <li
+        className="location-content__list-item"
+      >
+        <img
+          alt="timezone"
+          className="location-content__list-item-image"
+          height="14"
+          src="Timezone.svg"
+          width="14"
+        />
+        <p
+          className="location-content__list-item-text"
+        >
+          10:10 AM GMT+1
+           
+        </p>
+      </li>
+      <li
+        className="location-content__list-item"
+      >
+        <img
+          alt="views"
+          className="location-content__list-item-image"
+          height="14"
+          src="Views.svg"
+          width="14"
+        />
+        <p
+          className="location-content__list-item-text"
+        >
+          0
+           
+          views
+        </p>
+      </li>
+    </ul>
+  </div>,
   <div
     id="modal-root"
-  />
-</React.Fragment>
+  />,
+]
 `;

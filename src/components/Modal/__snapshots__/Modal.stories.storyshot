@@ -1,14 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots components/Modal Default 1`] = `
-<React.Fragment>
+Array [
   <div
     id="root"
   >
-    <Unknown />
-  </div>
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "border": "1px solid black",
+          "padding": 5,
+        }
+      }
+    >
+      Open Modal
+    </button>
+  </div>,
   <div
     id="modal-root"
-  />
-</React.Fragment>
+  />,
+]
 `;

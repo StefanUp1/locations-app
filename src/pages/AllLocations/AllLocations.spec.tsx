@@ -1,11 +1,6 @@
 import React from "react";
-import { render, fireEvent, waitFor, screen } from "@testing-library/react";
+import { render, fireEvent, screen } from "@testing-library/react";
 import AllLocation from "./AllLocations";
-
-// Purpose of this code is to remove react-i18next warning
-jest.mock("react-i18next", () => ({
-  useTranslation: () => ({ t: (key: any) => key }),
-}));
 
 test("loads and displays cards", async () => {
   render(<AllLocation />);
