@@ -6,6 +6,7 @@ import Timezone from "assets/images/Timezone.svg";
 import Views from "assets/images/Views.svg";
 
 import "./location-content.scss";
+import formatDateToTime from "helpers/formatDateToTime";
 
 interface LocationContentItemType {
   id: string;
@@ -68,7 +69,10 @@ const LocationContent = ({
             alt={item.imageAlt}
           />
           <p className="location-content__list-item-text">
-            {item.value} {item.valueSuffix}
+            {item.id === "createdAt"
+              ? formatDateToTime(item.value as string)
+              : item.value}{" "}
+            {item.valueSuffix}
           </p>
         </li>
       ))}
